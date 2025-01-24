@@ -1,0 +1,119 @@
+{
+    "version": "3",
+    "templates": [
+      {
+        "id": 1,
+        "type": 1,
+        "title": "Kanboard",
+        "description": "Open-source Kanban project management software",
+        "categories": ["project-management"],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/kanboard/logo/master/kanboard-256.png",
+        "image": "kanboard/kanboard:latest",
+        "ports": ["80/tcp"],
+        "volumes": [
+          {
+            "container": "/var/www/app/data"
+          },
+          {
+            "container": "/var/www/app/plugins"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "title": "Excalidraw",
+        "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+        "categories": ["drawing", "collaboration"],
+        "platform": "linux",
+        "logo": "https://excalidraw.com/logo-180x180.png",
+        "image": "excalidraw/excalidraw:latest",
+        "ports": ["80/tcp"],
+        "env": [
+          {
+            "name": "NODE_ENV",
+            "default": "production",
+            "preset": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 1,
+        "title": "Penpot",
+        "description": "Open-source design and prototyping platform",
+        "categories": ["design"],
+        "platform": "linux",
+        "logo": "https://penpot.app/images/logo-penpot.svg",
+        "image": "penpotapp/frontend:latest",
+        "ports": ["9001/tcp"],
+        "volumes": [
+          {
+            "container": "/opt/data"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": 1,
+        "title": "Shaarli",
+        "description": "Personal, minimalist, super-fast, no-database bookmarking service",
+        "categories": ["bookmarking"],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/shaarli/Shaarli/master/doc/md/images/favicon.png",
+        "image": "shaarli/shaarli:latest",
+        "ports": ["80/tcp"],
+        "volumes": [
+          {
+            "container": "/var/www/shaarli/data"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": 1,
+        "title": "Gitea",
+        "description": "A painless self-hosted Git service",
+        "categories": ["version-control"],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/go-gitea/gitea/main/public/img/logo.png",
+        "image": "gitea/gitea:latest",
+        "ports": [
+          "3000/tcp",
+          "22/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          },
+          {
+            "container": "/etc/timezone",
+            "bind": "/etc/timezone",
+            "readonly": true
+          },
+          {
+            "container": "/etc/localtime",
+            "bind": "/etc/localtime",
+            "readonly": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": 1,
+        "title": "ZeroBin",
+        "description": "Minimalist, open source online pastebin where the server has zero knowledge of pasted data",
+        "categories": ["tools"],
+        "platform": "linux",
+        "logo": "https://github.com/PrivateBin/PrivateBin/raw/master/img/logo.png",
+        "image": "privatebin/nginx-fpm-alpine:latest",
+        "ports": ["80/tcp"],
+        "volumes": [
+          {
+            "container": "/srv/data"
+          }
+        ]
+      }
+    ]
+  }
