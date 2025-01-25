@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .service {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .service img {
+            max-width: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .service a {
+            text-decoration: none;
+            color: #333;
+        }
+        .service p {
+            margin: 10px 0 0 60px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Services</h1>
+
+    <div class="service">
+        <img src="https://raw.githubusercontent.com/kanboard/logo/master/kanboard-256.png" alt="Kanboard">
+        <a href="http://0.0.0.0">Kanboard</a>
+        <p>Open-source Kanban project management software</p>
+    </div>
+
+    <div class="service">
+        <img src="https://excalidraw.com/logo-180x180.png" alt="Excalidraw">
+        <a href="http://0.0.0.0">Excalidraw</a>
+        <p>Virtual whiteboard for sketching hand-drawn like diagrams</p>
+    </div>
+
+    <div class="service">
+        <img src="https://penpot.app/images/logo-penpot.svg" alt="Penpot">
+        <a href="http://0.0.0.0">Penpot</a>
+        <p>Open-source design and prototyping platform</p>
+    </div>
+
+    <div class="service">
+        <img src="https://raw.githubusercontent.com/shaarli/Shaarli/master/doc/md/images/favicon.png" alt="Shaarli">
+        <a href="http://0.0.0.0">Shaarli</a>
+        <p>Personal, minimalist, super-fast, no-database bookmarking service</p>
+    </div>
+
+    <div class="service">
+        <img src="https://raw.githubusercontent.com/go-gitea/gitea/main/public/img/logo.png" alt="Gitea">
+        <a href="http://0.0.0.0">Gitea</a>
+        <p>A painless self-hosted Git service</p>
+    </div>
+
+    <div class="service">
+        <img src="https://github.com/PrivateBin/PrivateBin/raw/master/img/logo.png" alt="ZeroBin">
+        <a href="http://0.0.0.0">ZeroBin</a>
+        <p>Minimalist, open source online pastebin where the server has zero knowledge of pasted data</p>
+    </div>
+
+    <div class="service">
+        <img src="https://raw.githubusercontent.com/FreshRSS/FreshRSS/edge/docs/img/FreshRSS-logo.png" alt="FreshRSS">
+        <a href="http://0.0.0.0">FreshRSS</a>
+        <p>A free, self-hostable RSS feed aggregator</p>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .service {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        width: 300px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .service img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .service a {
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: #2c3e50;
+        text-decoration: none;
+    }
+
+    .service a:hover {
+        color: #3498db;
+    }
+
+    .service p {
+        margin: 0;
+        color: #666;
+        line-height: 1.5;
+    }
+</style>

@@ -108,10 +108,29 @@
         "platform": "linux",
         "logo": "https://github.com/PrivateBin/PrivateBin/raw/master/img/logo.png",
         "image": "privatebin/nginx-fpm-alpine:latest",
-        "ports": ["80/tcp"],
+        "ports": ["8080/tcp"],
         "volumes": [
           {
             "container": "/srv/data"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "type": 1,
+        "title": "FreshRSS",
+        "description": "A free, self-hostable RSS feed aggregator",
+        "categories": ["rss", "news"],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/FreshRSS/FreshRSS/edge/docs/img/FreshRSS-logo.png",
+        "image": "freshrss/freshrss:latest",
+        "ports": ["80/tcp"],
+        "volumes": [
+          {
+            "container": "/var/www/FreshRSS/data"
+          },
+          {
+            "container": "/var/www/FreshRSS/extensions"
           }
         ]
       }
