@@ -52,6 +52,19 @@
           {
             "container": "/opt/data"
           }
+        ],
+        "depends_on": ["penpot-backend"],
+        "services": [
+          {
+            "name": "penpot-backend",
+            "image": "penpotapp/backend:latest",
+            "ports": ["6060/tcp"],
+            "volumes": [
+              {
+                "container": "/opt/data"
+              }
+            ]
+          }
         ]
       },
       {
