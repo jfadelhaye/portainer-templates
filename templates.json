@@ -42,14 +42,21 @@
         "id": 3,
         "type": 3,
         "title": "Penpot",
-        "description": "Open-source design and prototyping platform",
+        "description": "Open-source design and prototyping platform", 
         "categories": ["design"],
         "platform": "linux",
         "logo": "https://penpot.app/images/logo-penpot.svg",
         "repository": {
           "url": "https://github.com/jfadelhaye/portainer-templates",
           "stackfile": "stacks/penpot.yml"
-        }
+        },
+        "env": [
+          {
+            "name": "PENPOT_SECRET_KEY",
+            "label": "Secret key for Penpot",
+            "description": "Master key used for subsystem encryption"
+          }
+        ]
       },
       {
         "id": 4,
