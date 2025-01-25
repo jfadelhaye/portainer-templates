@@ -40,96 +40,19 @@
       },
       {
         "id": 3,
-        "type": 1,
-        "title": "Penpote",
+        "type": 3,
+        "title": "Penpot",
         "description": "Open-source design and prototyping platform",
         "categories": ["design"],
         "platform": "linux",
         "logo": "https://penpot.app/images/logo-penpot.svg",
-        "image": "penpotapp/frontend:latest",
-        "ports": ["9001/tcp"],
-        "volumes": [
-          {
-            "container": "/opt/data"
-          }
-        ],
-        "depends_on": ["penpot-backend"],
-        "services": [
-          {
-            "name": "penpot-backend",
-            "image": "penpotapp/backend:latest",
-            "ports": ["6060/tcp"],
-            "volumes": [
-              {
-                "container": "/opt/data"
-              }
-            ]
-          }
-        ]
+        "repository": {
+          "url": "https://github.com/jfadelhaye/portainer-templates",
+          "stackfile": "stacks/penpot.yml"
+        }
       },
       {
         "id": 4,
-        "type": 1,
-        "title": "Shaarli",
-        "description": "Personal, minimalist, super-fast, no-database bookmarking service",
-        "categories": ["bookmarking"],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/shaarli/Shaarli/master/doc/md/images/favicon.png",
-        "image": "shaarli/shaarli:latest",
-        "ports": ["80/tcp"],
-        "volumes": [
-          {
-            "container": "/var/www/shaarli/data"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "type": 1,
-        "title": "Gitea",
-        "description": "A painless self-hosted Git service",
-        "categories": ["version-control"],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/go-gitea/gitea/main/public/img/logo.png",
-        "image": "gitea/gitea:latest",
-        "ports": [
-          "3000/tcp",
-          "22/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          },
-          {
-            "container": "/etc/timezone",
-            "bind": "/etc/timezone",
-            "readonly": true
-          },
-          {
-            "container": "/etc/localtime",
-            "bind": "/etc/localtime",
-            "readonly": true
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "type": 1,
-        "title": "ZeroBin",
-        "description": "Minimalist, open source online pastebin where the server has zero knowledge of pasted data",
-        "categories": ["tools"],
-        "platform": "linux",
-        "logo": "https://github.com/PrivateBin/PrivateBin/raw/master/img/logo.png",
-        "image": "privatebin/nginx-fpm-alpine:latest",
-        "ports": ["8080/tcp"],
-        "volumes": [
-          {
-            "container": "/srv/data"
-          }
-        ]
-      },
-      {
-        "id": 7,
         "type": 1,
         "title": "FreshRSS",
         "description": "A free, self-hostable RSS feed aggregator",
